@@ -1,0 +1,39 @@
+<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black" style="margin-left: 11px;">Agregar</button>
+
+<div id="id01" class="w3-modal" >
+  <div class="w3-modal-content"style="width: 40%;">
+    <header class="w3-container w3-teal">
+      <span onclick="document.getElementById('id01').style.display='none'"
+      class="w3-button w3-display-topright">&times;</span>
+      <h2>Ingresar Cliente</h2>
+    </header>
+    <div class="w3-container mt-2">
+      <form [formGroup]="form" (ngSubmit)="agregar()">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+        <input type="text" class="form-control" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1" formControlName="nombre">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-tie"></i></span>
+        <input type="text" class="form-control" placeholder="Apellido" aria-label="Username" aria-describedby="basic-addon1" formControlName="apellido">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+        <input type="email" class="form-control" placeholder="Correo" aria-label="Username" aria-describedby="basic-addon1" formControlName="email">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone-square-alt"></i></span>
+        <input type="tel" class="form-control" placeholder="Telefono" aria-label="Username" aria-describedby="basic-addon1" formControlName="telefono">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fas fa-city"></i></span>
+        <input type="text" class="form-control" placeholder="Ciudad" aria-label="Username" aria-describedby="basic-addon1" formControlName="ciudad">
+      </div>
+
+      <button class="btn btn-primary" style="margin-bottom: 2px; width: 100%;" type="submit">Agregar</button></form>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal Footer</p>
+    </footer>
+  </div>
+</div>
